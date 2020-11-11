@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <queue>
 #include "ArgumentManager.h"
 
 void bubbleSort(int* keyArr, int size)
@@ -92,6 +93,11 @@ struct node
 
         delete[] child;
         child = nullptr;
+    }
+
+    int getDegree()
+    {
+        return degree;
     }
 
     bool isKeyFull()
@@ -195,6 +201,40 @@ public:
         }
     }
 
+    void printBtLevel(node* root)
+    {
+        //If the tree is empty
+        if (root == nullptr)
+        {
+            return;
+        }
+
+        queue<node*> q;
+
+        q.push(root);
+
+        while (!q.empty())
+        {
+            //Print all the key of the root
+            for (int i = 0; i < q.front()->keyNum; i++)
+            {
+                cout << q.front()->key[i] << endl;
+            }
+
+            //Push all the child node of the root
+            for (int j = 0; j < q.front()->childNum; j++)
+            {
+                if (q.front()->child[j] != nullptr)
+                {
+                    q.push(q.front()->child[j]);
+                }
+
+            }
+
+            q.pop();
+        }
+    }
+
 
 
 };
@@ -261,6 +301,7 @@ int main(int argc, char* argv[])
 
     }
 
+    tree.printBtLevel(tree.getRoot());
 
 
 
