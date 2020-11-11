@@ -15,7 +15,41 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="COSC2430_Homework5.cpp">
+    <Text Include="ans51.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ans52.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ans53.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="command51.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="command52.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="command53.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="input51.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="input52.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="input53.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ArgumentManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
